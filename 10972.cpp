@@ -20,12 +20,12 @@ int main() {
         i--;
         if (i == 0) { cout << "-1";  return 0; }
     }
-    int min = max_element(perm.begin()+i, perm.end())- perm.begin(); //여기 보기
+    int min = max_element(perm.begin()+i, perm.end())- perm.begin();
     int j = i;
     for (; j < N; j++) {
         if (perm[i-1] < perm[j] && perm[j] < perm[min]) { min = j; }
     }
-    swap(perm[i - 1], perm[min]); //여기서 에러가 남
+    swap(perm[i - 1], perm[min]);
     sort(perm.begin() + i, perm.end());
 
     for (int i = 0; i < N; i++) {
